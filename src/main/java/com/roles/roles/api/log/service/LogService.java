@@ -1,4 +1,4 @@
-package com.roles.roles.service;
+package com.roles.roles.api.log.service;
 
 import com.roles.roles.persistence.entity.LogEntity;
 import com.roles.roles.persistence.repository.LogRepository;

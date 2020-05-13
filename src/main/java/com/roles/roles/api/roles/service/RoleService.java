@@ -1,5 +1,7 @@
-package com.roles.roles.service;
+package com.roles.roles.api.roles.service;
 
+import com.roles.roles.api.roles.exceptions.RoleNotFoundException;
+import com.roles.roles.exception.ErrorCodes;
 import com.roles.roles.persistence.entity.LogEntity;
 import com.roles.roles.persistence.entity.RoleEntity;
 import com.roles.roles.persistence.repository.LogRepository;
@@ -51,6 +53,8 @@ public class RoleService {
     }
 
     public Long deleteRole(Long id) throws Exception {
+        roleRepository.findById(id).orElseThrow(() -> new RoleNotFoundException(ErrorCodes.ROLE_DOES_NOT_EXIST));
+
         try {
             roleRepository.deleteById(id);
             logRepository.save(new LogEntity("Role with id " + id + " deleted."));

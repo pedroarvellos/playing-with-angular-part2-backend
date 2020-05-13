@@ -1,7 +1,7 @@
-package com.roles.roles.controller;
+package com.roles.roles.api.roles.controller;
 
 import com.roles.roles.persistence.entity.RoleEntity;
-import com.roles.roles.service.RoleService;
+import com.roles.roles.api.roles.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

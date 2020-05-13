@@ -1,7 +1,7 @@
-package com.roles.roles.controller;
+package com.roles.roles.api.log.controller;
 
+import com.roles.roles.api.log.service.LogService;
 import com.roles.roles.persistence.entity.LogEntity;
-import com.roles.roles.service.LogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
