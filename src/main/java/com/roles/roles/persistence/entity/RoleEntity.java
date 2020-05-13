@@ -3,14 +3,14 @@ package com.roles.roles.persistence.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "role")
 public class RoleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "role")
+    @Column(name = "role_role")
     private String role;
-    @Column(name = "name")
+    @Column(name = "role_name")
     private String name;
 
     public Long getId() {
