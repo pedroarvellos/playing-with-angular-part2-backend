@@ -1,6 +1,6 @@
 package com.roles.roles.api.roles.service;
 
-import com.roles.roles.api.roles.exceptions.RoleNotFoundException;
+import com.roles.roles.api.roles.exception.RoleNotFoundException;
 import com.roles.roles.exception.ErrorCodes;
 import com.roles.roles.persistence.entity.LogEntity;
 import com.roles.roles.persistence.entity.RoleEntity;

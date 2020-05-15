@@ -1,0 +1,51 @@
+version: '3.4'
+
+services:
+  db:
+    image: mysql:5.7
+    secrets:
+      - user
+      - password
+      - root_password
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER_FILE: /run/secrets/user
+      MYSQL_PASSWORD_FILE: /run/secrets/password
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/root_password
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+    networks:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    image: java-backend
+    networks:
+      - backend
+    deploy:
+      replicas: 2
+    depends_on:
+      - db
+
+networks:
+  backend:
+
+volumes:
+  my-db:
+
+secrets:
+  user:
+    file: ./user.txt
+  password:
+    file: ./password.txt
+  root_password:
+    file: ./root-password.txt

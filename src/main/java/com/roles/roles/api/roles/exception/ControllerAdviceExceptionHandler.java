@@ -1,4 +1,4 @@
-package com.roles.roles.api.roles.exceptions;
+package com.roles.roles.api.roles.exception;
 
 import com.roles.roles.exception.ErrorTemplate;
 import org.springframework.http.ResponseEntity;

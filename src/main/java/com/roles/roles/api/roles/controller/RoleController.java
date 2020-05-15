@@ -1,7 +1,7 @@
 package com.roles.roles.api.roles.controller;
 
-import com.roles.roles.persistence.entity.RoleEntity;
 import com.roles.roles.api.roles.service.RoleService;
+import com.roles.roles.persistence.entity.RoleEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +12,6 @@ import java.util.List;
 public class RoleController {
     private final RoleService roleService;
 
-    @Autowired
     public RoleController(RoleService roleService) {
         this.roleService = roleService;
     }

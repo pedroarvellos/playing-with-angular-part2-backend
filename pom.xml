@@ -9,8 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.roles</groupId>
-	<artifactId>roles</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>my-application</artifactId>
 	<name>roles</name>
 	<description>Demo project for Spring Boot</description>
 
